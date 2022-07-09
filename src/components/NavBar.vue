@@ -119,34 +119,6 @@ const logout = () => {
           />
         </NavBarItem>
         <NavBarMenu has-divider>
-          <NavBarItemLabel
-            :icon="mdiMenu"
-            label="Sample menu"
-          />
-
-          <template #dropdown>
-            <NavBarItem>
-              <NavBarItemLabel
-                :icon="mdiClockOutline"
-                label="Item One"
-              />
-            </NavBarItem>
-            <NavBarItem>
-              <NavBarItemLabel
-                :icon="mdiCloud"
-                label="Item Two"
-              />
-            </NavBarItem>
-            <BaseDivider nav-bar />
-            <NavBarItem>
-              <NavBarItemLabel
-                :icon="mdiCrop"
-                label="Item Last"
-              />
-            </NavBarItem>
-          </template>
-        </NavBarMenu>
-        <NavBarMenu has-divider>
           <NavBarItemLabel :label="userName">
             <UserAvatar class="w-6 h-6 mr-3 inline-flex" />
           </NavBarItemLabel>
