@@ -1,16 +1,6 @@
 import {
-  mdiAccountCircle,
-  mdiDesktopMac,
-  mdiGithub,
-  mdiLock,
-  mdiAlertCircle,
-  mdiMonitorShimmer,
-  mdiSquareEditOutline,
-  mdiTable,
-  mdiViewList,
-  mdiTelevisionGuide,
-  mdiResponsive,
-  mdiPalette
+  mdiAccountCircle, mdiAlertCircle, mdiChatProcessingOutline, mdiDesktopMac, mdiLock, mdiSquareEditOutline,
+  mdiTable, mdiTelevisionGuide
 } from '@mdi/js'
 
 export default [
@@ -20,6 +10,11 @@ export default [
       to: '/dashboard',
       icon: mdiDesktopMac,
       label: 'Dashboard'
+    },
+    {
+      to: '/chat',
+      icon: mdiChatProcessingOutline,
+      label: 'Chat'
     }
   ],
   'Examples',

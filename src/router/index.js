@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '@/views/HomeView.vue'
-
+import Chat from '@/views/ChatView.vue'
 const routes = [
   {
     // Document title tag
@@ -21,6 +21,14 @@ const routes = [
     path: '/dashboard',
     name: 'dashboard',
     component: Home
+  },
+  {
+    meta: {
+      title: 'chat'
+    },
+    path: '/chat',
+    name: 'chat',
+    component: Chat
   },
   {
     meta: {

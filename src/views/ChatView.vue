@@ -1,6 +1,6 @@
 <script setup>
-import { computed, ref, onMounted } from 'vue'
-import { useMainStore } from '@/stores/main'
+import { computed, ref, onMounted } from "vue";
+import { useMainStore } from "@/stores/main";
 import {
   mdiAccountMultiple,
   mdiCartOutline,
@@ -9,39 +9,39 @@ import {
   mdiMonitorCellphone,
   mdiReload,
   mdiGithub,
-  mdiChartPie
-} from '@mdi/js'
-import * as chartConfig from '@/components/Charts/chart.config.js'
-import LineChart from '@/components/Charts/LineChart.vue'
-import SectionMain from '@/components/SectionMain.vue'
-import SectionTitleBar from '@/components/SectionTitleBar.vue'
-import SectionHeroBar from '@/components/SectionHeroBar.vue'
-import CardBoxWidget from '@/components/CardBoxWidget.vue'
-import CardBox from '@/components/CardBox.vue'
-import TableSampleClients from '@/components/TableSampleClients.vue'
-import NotificationBar from '@/components/NotificationBar.vue'
-import BaseButton from '@/components/BaseButton.vue'
-import CardBoxTransaction from '@/components/CardBoxTransaction.vue'
-import CardBoxClient from '@/components/CardBoxClient.vue'
-import SectionTitleBarSub from '@/components/SectionTitleBarSub.vue'
+  mdiChartPie,
+} from "@mdi/js";
+import * as chartConfig from "@/components/Charts/chart.config.js";
+import LineChart from "@/components/Charts/LineChart.vue";
+import SectionMain from "@/components/SectionMain.vue";
+import SectionTitleBar from "@/components/SectionTitleBar.vue";
+import SectionHeroBar from "@/components/SectionHeroBar.vue";
+import CardBoxWidget from "@/components/CardBoxWidget.vue";
+import CardBox from "@/components/CardBox.vue";
+import TableSampleClients from "@/components/TableSampleClients.vue";
+import NotificationBar from "@/components/NotificationBar.vue";
+import BaseButton from "@/components/BaseButton.vue";
+import CardBoxTransaction from "@/components/CardBoxTransaction.vue";
+import CardBoxClient from "@/components/CardBoxClient.vue";
+import SectionTitleBarSub from "@/components/SectionTitleBarSub.vue";
 
-const titleStack = ref(['Admin', 'Dashboard'])
+const titleStack = ref(["Admin", "Dashboard"]);
 
-const chartData = ref(null)
+const chartData = ref(null);
 
 const fillChartData = () => {
-  chartData.value = chartConfig.sampleChartData()
-}
+  chartData.value = chartConfig.sampleChartData();
+};
 
 onMounted(() => {
-  fillChartData()
-})
+  fillChartData();
+});
 
-const mainStore = useMainStore()
+const mainStore = useMainStore();
 
-const clientBarItems = computed(() => mainStore.clients.slice(0, 3))
+const clientBarItems = computed(() => mainStore.clients.slice(0, 3));
 
-const transactionBarItems = computed(() => mainStore.history.slice(0, 3))
+const transactionBarItems = computed(() => mainStore.history.slice(0, 3));
 </script>
 
 <template>
@@ -101,7 +101,7 @@ const transactionBarItems = computed(() => mainStore.history.slice(0, 3))
     <div class="grid grid-cols-1 xl:grid-cols-2 gap-6 mb-6">
       <div class="flex flex-col justify-between">
         <CardBoxTransaction
-          v-for="(transaction,index) in transactionBarItems"
+          v-for="(transaction, index) in transactionBarItems"
           :key="index"
           :amount="transaction.amount"
           :date="transaction.date"
@@ -123,10 +123,7 @@ const transactionBarItems = computed(() => mainStore.history.slice(0, 3))
       </div>
     </div>
 
-    <SectionTitleBarSub
-      :icon="mdiChartPie"
-      title="Trends overview"
-    />
+    <SectionTitleBarSub :icon="mdiChartPie" title="Trends overview" />
 
     <CardBox
       title="Performance"
@@ -136,30 +133,17 @@ const transactionBarItems = computed(() => mainStore.history.slice(0, 3))
       @header-icon-click="fillChartData"
     >
       <div v-if="chartData">
-        <line-chart
-          :data="chartData"
-          class="h-96"
-        />
+        <line-chart :data="chartData" class="h-96" />
       </div>
     </CardBox>
 
-    <SectionTitleBarSub
-      :icon="mdiAccountMultiple"
-      title="Clients"
-    />
+    <SectionTitleBarSub :icon="mdiAccountMultiple" title="Clients" />
 
-    <NotificationBar
-      color="info"
-      :icon="mdiMonitorCellphone"
-    >
+    <NotificationBar color="info" :icon="mdiMonitorCellphone">
       <b>Responsive table.</b> Collapses on mobile
     </NotificationBar>
 
-    <CardBox
-      :icon="mdiMonitorCellphone"
-      title="Responsive table"
-      has-table
-    >
+    <CardBox :icon="mdiMonitorCellphone" title="Responsive table" has-table>
       <TableSampleClients />
     </CardBox>
   </SectionMain>
