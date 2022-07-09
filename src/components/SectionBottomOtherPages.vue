@@ -38,7 +38,7 @@ for (const routeIndex in routes) {
         <span>GitHub</span>
       </a>
     </h1> -->
-    <h1 class="text-2xl text-gray-500 dark:text-gray-400 mb-12">
+    <!-- <h1 class="text-2xl text-gray-500 dark:text-gray-400 mb-12">
       Check out other components and layouts at<br>
       <template
         v-for="(screen, index) in screens"
@@ -63,6 +63,6 @@ for (const routeIndex in routes) {
         target="_blank"
         class="text-blue-600"
       >Premium version</a>
-    </h1>
+    </h1> -->
   </SectionTitle>
 </template>
