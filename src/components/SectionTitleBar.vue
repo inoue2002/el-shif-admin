@@ -23,13 +23,13 @@ defineProps({
           {{ title }}
         </li>
       </ul>
-      <BaseButton
+      <!-- <BaseButton
         href="https://github.com/justboil/admin-one-vue-tailwind"
         color="info"
         label="Star on GitHub"
         target="_blank"
         :icon="mdiGithub"
-      />
+      /> -->
     </BaseLevel>
   </section>
 </template>
