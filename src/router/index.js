@@ -1,16 +1,16 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import Style from '@/views/StyleView.vue'
 import Home from '@/views/HomeView.vue'
 
 const routes = [
   {
+    // Document title tag
+    // We combine it with defaultDocumentTitle set in `src/main.js` on router.afterEach hook
     meta: {
-      title: 'Select style',
-      fullScreen: true
+      title: 'Dashboard'
     },
     path: '/',
-    name: 'style',
-    component: Style
+    name: 'dashboard',
+    component: Home
   },
   {
     // Document title tag

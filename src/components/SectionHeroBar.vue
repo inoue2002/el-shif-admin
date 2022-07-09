@@ -15,11 +15,11 @@ const styleStore = useStyleStore()
       <h1 class="text-3xl font-semibold leading-tight">
         <slot />
       </h1>
-      <BaseButton
+      <!-- <BaseButton
         :label="styleStore.darkMode ? 'Light Mode' : 'Dark Mode'"
         :icon="mdiThemeLightDark"
         @click="styleStore.setDarkMode()"
-      />
+      /> -->
     </BaseLevel>
   </section>
 </template>

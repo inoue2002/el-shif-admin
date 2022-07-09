@@ -47,7 +47,7 @@ const menuClick = () => {
         />
       </NavBarItem>
       <div class="flex-1 px-3">
-        <span>Admin</span> <b class="font-black">One</b>
+        <span>L-SHIFT</span>
       </div>
     </div>
     <div>
