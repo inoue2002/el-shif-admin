@@ -76,20 +76,5 @@ export default [
         }
       ]
     }
-  ],
-  'About',
-  [
-    {
-      href: 'https://tailwind-vue.justboil.me/',
-      label: 'Premium version',
-      icon: mdiMonitorShimmer,
-      target: '_blank'
-    },
-    {
-      href: 'https://github.com/justboil/admin-one-vue-tailwind',
-      label: 'GitHub',
-      icon: mdiGithub,
-      target: '_blank'
-    }
   ]
 ]
