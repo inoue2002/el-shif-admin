@@ -27,7 +27,6 @@ import NavBarMenu from '@/components/NavBarMenu.vue'
 import BaseDivider from '@/components/BaseDivider.vue'
 import UserAvatar from '@/components/UserAvatar.vue'
 import BaseIcon from '@/components/BaseIcon.vue'
-import NavBarSearch from '@/components/NavBarSearch.vue'
 
 const mainStore = useMainStore()
 
@@ -91,9 +90,6 @@ const logout = () => {
           :path="mdiMenu"
           size="24"
         />
-      </NavBarItem>
-      <NavBarItem>
-        <NavBarSearch />
       </NavBarItem>
     </div>
     <div class="flex-none items-stretch flex h-14 lg:hidden">
