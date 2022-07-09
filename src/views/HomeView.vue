@@ -48,7 +48,7 @@ const transactionBarItems = computed(() => mainStore.history.slice(0, 3))
   <SectionTitleBar :title-stack="titleStack" />
   <SectionHeroBar>Dashboard</SectionHeroBar>
   <SectionMain>
-    <NotificationBar
+    <!-- <NotificationBar
       color="info"
       :icon="mdiGithub"
     >
@@ -67,7 +67,7 @@ const transactionBarItems = computed(() => mainStore.history.slice(0, 3))
           small
         />
       </template>
-    </NotificationBar>
+    </NotificationBar> -->
     <div class="grid grid-cols-1 gap-6 lg:grid-cols-3 mb-6">
       <CardBoxWidget
         trend="12%"
